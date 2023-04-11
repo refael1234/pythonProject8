@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pythonproject8"
+version = "0.1.0"
+description = ""
+authors = ["refael1234 <reacm06@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+action = "^1.4.4"
+selenium = "^4.8.3"
+selenium-actions = "^1.0.6"
+pyassert = "^0.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
