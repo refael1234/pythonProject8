@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
+from allure_commons.types import AttachmentType
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
@@ -18,10 +19,10 @@ time.sleep(3)
 driver.find_element(locate_with(By.XPATH, "//span[@class='text-link theme']")).click()
 
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='שם פרטי']")).send_keys('refael')
-driver.find_element(locate_with(By.XPATH, "//input[@placeholder='מייל']")).send_keys('TTJshhl5T@gmail.com')
+driver.find_element(locate_with(By.XPATH, "//input[@placeholder='מייל']")).send_keys('s3k7T@gmail.com')
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='סיסמה']")).send_keys('Re123456')
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='אימות סיסמה']")).send_keys('Re123456')
-First_Name = 'refael'
+
 driver.find_element(locate_with(By.CLASS_NAME, "fill")).click()
 time.sleep(3)
 
@@ -76,4 +77,10 @@ rar2 = rar.find_element(By.CSS_SELECTOR,'li[value="10"]')
 rar2.click()
 time.sleep(2)
 
+driver.find_element(locate_with(By.XPATH, "//textarea[@rows='4']")).clear()
+driver.find_element(locate_with(By.XPATH, "//textarea[@rows='4']")).send_keys('roni')
+time.sleep(2)
+
+driver.find_element(locate_with(By.XPATH, "//label[@class='media-circle-btn ember-view bm-media-upload']")).click()
+driver.find_element(locate_with(By.XPATH, "//label[@class='media-circle-btn ember-view bm-media-upload']")).send_keys('C:\\Users\\Refael\\Desktop\\IMG_6670.jpg')
 time.sleep(3)
