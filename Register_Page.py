@@ -1,5 +1,4 @@
 import json
-
 import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
@@ -15,9 +14,11 @@ class RegisterPage():
     def send_text(self):
         json_file = open('register.json', 'r')
         data = json.load(json_file)
+        Url = data['Url']
         username = data['username']
         email = data['email']
         password = data['password']
+        self.driver.get(Url)
         self.driver.find_element(locate_with(By.CLASS_NAME, "notSigned")).click()
         time.sleep(3)
         self.driver.find_element(locate_with(By.XPATH, "//span[@class='text-link theme']")).click()

@@ -12,6 +12,7 @@ selenium = "^4.8.3"
 selenium-actions = "^1.0.6"
 pyassert = "^0.4.2"
 allure-pytest = "^2.13.1"
+selenium-page-factory = "^2.6"
 
 
 [build-system]

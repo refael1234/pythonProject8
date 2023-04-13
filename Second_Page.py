@@ -3,25 +3,27 @@ import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
 from allure_commons.types import AttachmentType
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.keys import Keys
+from Register_Page import RegisterPage
 import time
 
 class SecondPage():
     def __init__(self, driver):
         self.driver = driver
 
-    def sender_text(self):
+    def send_text(self):
         json_file = open('register.json', 'r')
         data = json.load(json_file)
         Gift = data['Gift']
-
+        Url = data['Url']
+        self.driver.get(Url)
         rar = self.driver.find_element(By.CLASS_NAME, "input-label-wrapper")
         rar.click()
         rar1 = rar.find_element(By.CSS_SELECTOR, 'li[value="1"]')
         rar1.click()
+        time.sleep(3)
         rar2 = self.driver.find_elements(By.CLASS_NAME, "input-label-wrapper")[1]
         rar2.click()
+        time.sleep(3)
         rar3 = rar.find_element(By.CSS_SELECTOR, 'li[value="11"]')
         rar3.click()
         rar4 = self.driver.find_elements(By.CLASS_NAME, "input-label-wrapper")[2]

@@ -365,6 +365,20 @@ files = [
 selenium = ">=4.2.0"
 
 [[package]]
+name = "selenium-page-factory"
+version = "2.6"
+description = "Python library provides page factory approach to implement page object model in selenium"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "selenium-page-factory-2.6.tar.gz", hash = "sha256:1784916fa9a2a07707878acc30edec2e2a2db077e3c3b8203a72c816f77c26fb"},
+]
+
+[package.dependencies]
+selenium = "*"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -489,4 +503,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "2b3c767b480248e0c88d59b7106f02157fb4429b8a52dfcde8264863c28c4bb0"
+content-hash = "2e16ce0b848dd937580642608d01525c764404f25f32d6fe548bb28dae028c06"
