@@ -1,9 +1,13 @@
 {
   "Url": "https://buyme.co.il/",
   "Turl": "https://buyme.co.il/search?budget=1&category=22&query=AZRIELI%20GIFTCARD&region=11",
+  "Furl": "https://buyme.co.il/money/398383?price=100",
   "username": "refael" ,
-  "email": "gd2jh3k5k8g@gmail.com",
+  "email": "oi1sa@gmail.com",
   "password": "Re123456",
   "Gift": "AZRIELI GIFTCARD",
-  "Price": "100"
+  "Price": "100",
+  "text1": "refael",
+  "text2": "happy birthday",
+  "picture": "C:\\Users\\Refael\\Desktop\\IMG_6670.jpg"
 }

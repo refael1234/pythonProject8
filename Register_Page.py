@@ -3,13 +3,15 @@ import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
 from allure_commons.types import AttachmentType
+from base_page import BasePage
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
 
-class RegisterPage():
+class RegisterPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        BasePage.__init__(self, driver)
+
 
     def send_text(self):
         json_file = open('register.json', 'r')
@@ -19,16 +21,16 @@ class RegisterPage():
         email = data['email']
         password = data['password']
         self.driver.get(Url)
-        self.driver.find_element(locate_with(By.CLASS_NAME, "notSigned")).click()
+        self.click_element(By.CLASS_NAME, "notSigned")
         time.sleep(3)
-        self.driver.find_element(locate_with(By.XPATH, "//span[@class='text-link theme']")).click()
-        self.driver.find_element(locate_with(By.XPATH, "//input[@placeholder='שם פרטי']")).send_keys(username)
-        self.driver.find_element(locate_with(By.XPATH, "//input[@placeholder='מייל']")).send_keys(email)
-        self.driver.find_element(locate_with(By.XPATH, "//input[@placeholder='סיסמה']")).send_keys(password)
-        self.driver.find_element(locate_with(By.XPATH, "//input[@placeholder='אימות סיסמה']")).send_keys(password)
-        self.driver.find_element(locate_with(By.CLASS_NAME, "fill")).click()
+        self.click_element(By.XPATH, "//span[@class='text-link theme']")
+        self.send_key(By.XPATH, "//input[@placeholder='שם פרטי']",username)
+        self.send_key(By.XPATH, "//input[@placeholder='מייל']",email)
+        self.send_key(By.XPATH, "//input[@placeholder='סיסמה']",password)
+        self.send_key(By.XPATH, "//input[@placeholder='אימות סיסמה']",password)
+        self.click_element(By.CLASS_NAME, "fill")
         allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
-        self.driver.find_element(locate_with(By.CSS_SELECTOR, "span[class=label]")).click()
+        self.click_element(By.CSS_SELECTOR, "span[class=label]")
         time.sleep(3)
 
     def tearDown(self):

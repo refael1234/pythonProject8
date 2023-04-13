@@ -3,7 +3,7 @@ import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.relative_locator import locate_with
 from allure_commons.types import AttachmentType
-from Register_Page import RegisterPage
+from base_page import BasePage
 import time
 
 class SecondPage():

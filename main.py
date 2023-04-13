@@ -19,7 +19,7 @@ time.sleep(3)
 driver.find_element(locate_with(By.XPATH, "//span[@class='text-link theme']")).click()
 
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='שם פרטי']")).send_keys('refael')
-driver.find_element(locate_with(By.XPATH, "//input[@placeholder='מייל']")).send_keys('s3ks8T@gmail.com')
+driver.find_element(locate_with(By.XPATH, "//input[@placeholder='מייל']")).send_keys('s3ks8T@gjmllkalil.com')
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='סיסמה']")).send_keys('Re123456')
 driver.find_element(locate_with(By.XPATH, "//input[@placeholder='אימות סיסמה']")).send_keys('Re123456')
 
@@ -27,6 +27,7 @@ driver.find_element(locate_with(By.CLASS_NAME, "fill")).click()
 time.sleep(3)
 
 driver.find_element(locate_with(By.CSS_SELECTOR, "span[class=label]")).click()
+
 time.sleep(3)
 
 rar = driver.find_element(By.CLASS_NAME, "input-label-wrapper")
@@ -81,6 +82,6 @@ driver.find_element(locate_with(By.XPATH, "//textarea[@rows='4']")).clear()
 driver.find_element(locate_with(By.XPATH, "//textarea[@rows='4']")).send_keys('roni')
 time.sleep(2)
 
-driver.find_element(locate_with(By.XPATH, "//label[@class='media-circle-btn ember-view bm-media-upload']")).click()
-driver.find_element(locate_with(By.XPATH, "//label[@class='media-circle-btn ember-view bm-media-upload']")).send_keys('C:\\Users\\Refael\\Desktop\\IMG_6670.jpg')
+#driver.find_element(locate_with(By.XPATH, "//label[@class='media-circle-btn ember-view bm-media-upload']")).click()
+driver.find_element(locate_with(By.NAME,  "logo")).send_keys('C:\\Users\\Refael\\Desktop\\IMG_6670.jpg')
 time.sleep(3)
