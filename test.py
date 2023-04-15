@@ -18,10 +18,10 @@ class Test_Buyme_Pages(TestCase):
         self.Fourth_Page = FourthPage(self.driver)
 
     def test_register_box(self):
-        #self.Register_Page.send_text()
-        #self.Second_Page.send_text()
+        self.Register_Page.send_text()
+        self.Second_Page.send_text()
         self.Third_Page.send_text()
-        #self.Fourth_Page.send_text()
+        self.Fourth_Page.send_text()
 
     def tearDown(self):
         self.driver.quit()

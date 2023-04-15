@@ -1,11 +1,6 @@
 import json
-import allure
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.relative_locator import locate_with
-from allure_commons.types import AttachmentType
 from base_page import BasePage
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.keys import Keys
 import time
 
 class RegisterPage(BasePage):
@@ -29,8 +24,8 @@ class RegisterPage(BasePage):
         self.send_key(By.XPATH, "//input[@placeholder='סיסמה']",password)
         self.send_key(By.XPATH, "//input[@placeholder='אימות סיסמה']",password)
         self.click_element(By.CLASS_NAME, "fill")
-        allure.attach(self.driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
         self.click_element(By.CSS_SELECTOR, "span[class=label]")
+        self.driver.find_element(By.CSS_SELECTOR, "span[class=label]")
         time.sleep(3)
 
     def tearDown(self):
