@@ -1,14 +1,12 @@
 import json
-import allure
 from selenium.webdriver.common.by import By
-from allure_commons.types import AttachmentType
 from base_page import BasePage
-import time
 
 class FourthPage(BasePage):
     def __init__(self, driver):
         BasePage.__init__(self, driver)
 
+# The tests of the four page with screenshot
     def send_text(self):
         json_file = open('register.json', 'r')
         data = json.load(json_file)
@@ -20,7 +18,7 @@ class FourthPage(BasePage):
         Url = data['Furl']
         self.driver.get(Url)
         self.send_key(By.XPATH, "//input[@maxlength='25']",text1)
-        time.sleep(1)
+        self.driver.set_page_load_timeout(1)
         blessing = self.driver.find_element(By.CLASS_NAME, "input-label-wrapper")
         blessing.click()
         blessing.find_element(By.CSS_SELECTOR, 'li[value="10"]').click()

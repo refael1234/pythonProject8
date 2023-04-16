@@ -1,9 +1,10 @@
 {
+  "driver": "C:\\\\Users\\\\Refael\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe",
   "Url": "https://buyme.co.il/",
   "Turl": "https://buyme.co.il/search?budget=1&category=22&query=AZRIELI%20GIFTCARD&region=11",
   "Furl": "https://buyme.co.il/money/398383?price=100&step=2&w=28652302",
   "username": "refael" ,
-  "email": "oi1ksjaj31kk2j5kjlk6kljm4578@gmail.com",
+  "email": "oilfm4578@gmail.com",
   "password": "Re123456",
   "Gift": "AZRIELI GIFTCARD",
   "Price": "100",

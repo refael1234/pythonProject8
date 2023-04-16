@@ -3,11 +3,12 @@ from selenium.webdriver.common.by import By
 from base_page import BasePage
 import time
 
+# CLASS inherits from BASEPAGE
 class RegisterPage(BasePage):
     def __init__(self, driver):
         BasePage.__init__(self, driver)
 
-
+# The tests of the first page
     def send_text(self):
         json_file = open('register.json', 'r')
         data = json.load(json_file)
